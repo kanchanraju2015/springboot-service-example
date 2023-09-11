@@ -11,13 +11,25 @@ public class StudentServImpl implements StudentService
 	@Autowired
 	StudentRepository srepo;
 	
-public String addStudent(Student s)
+public Student addStudent(Student s)
 {
 srepo.save(s);  // calling the repository method
-return "student saved into database";
+return s;
 }
 public List<Student> listStudent()
 {
 	return srepo.findAll();
+}
+@Override
+public List<Student> getByName(String name) {
+	return srepo.findByName(name);
+}
+@Override
+public List<Student> getByAge(int age) {
+	return srepo.findByAge(age);
+}
+@Override
+public List<Student> getByAddress(String address) {
+return srepo.findByAddress(address);
 }
 }
