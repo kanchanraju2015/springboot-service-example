@@ -12,16 +12,12 @@ public class StudentController
 {
 @Autowired
 StudentService sserv;
-@RequestMapping("/test")
-public String test()
-{
-	Student s=new Student();
-	s.setAddress("lalpur");
-	s.setAge(90);
-	s.setName("chandan");
-	sserv.addStudent(s);// calling the service layer with student object
-	return "this is service test";
-}
+@RequestMapping("/save")
+	public Student add(@RequestBody Student student)
+	{
+		sserv.addStudent(student);
+	}
+
 @RequestMapping("/list")
 public List<Student> allstudents()
 {
