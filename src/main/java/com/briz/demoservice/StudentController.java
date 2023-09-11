@@ -35,5 +35,9 @@ public List<Student> byname(@PathVariable String name)
 	{
 		return sserv.getByAge(age);
 	}
-
+@RequestMapping("/by/address/{address}")
+	publicList<Student> byaddress(@PathVariable String address)
+	{
+		return sserv.getByAddress(address);
+	}
 }
