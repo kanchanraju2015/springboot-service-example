@@ -23,4 +23,9 @@ public List<Student> allstudents()
 {
 	return sserv.listStudent();// calling the service method 
 }
+	@RequestMapping("/by/{name}")
+	public List<Student> byname(@PathVariable String name)
+	{
+		return sserv.getByName(name);
+	}
 }
