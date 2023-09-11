@@ -13,4 +13,5 @@ List<Student> findByAge(int age);
 List<Student> findByAddress(String address);
   Student findById(int id);
   List<Student> findByNameAndAddress(String name,String address);
+  List<Student> findByNameAndAge(String name,int age);
 }
