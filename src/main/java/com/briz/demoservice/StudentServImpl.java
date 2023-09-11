@@ -32,4 +32,9 @@ public List<Student> getByAge(int age) {
 public List<Student> getByAddress(String address) {
 return srepo.findByAddress(address);
 }
+@Override
+public Student getById(int id) {
+	Student student=srepo.findById(id);
+	return student;
+}
 }
