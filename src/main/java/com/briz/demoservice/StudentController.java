@@ -30,5 +30,10 @@ public List<Student> byname(@PathVariable String name)
 {
 	return sserv.getByName(name);
 }
+	@RequestMapping("/{age}")
+	public List<Student> byage(@PathVariable int age)
+	{
+		return sserv.getByAge(age);
+	}
 
 }
